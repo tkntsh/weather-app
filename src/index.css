@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #87CEEB, #E0F6FF); /* Sky blue to light blue */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s;
+  }
+  body.dark {
+    background: linear-gradient(135deg, #2C3E50, #34495E); /* Dark blue gradient */
+  }
+}
+
+@layer components {
+  .cloud-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23ffffff33" fill-opacity="0.2" d="M0,128L48,138.7C96,149,192,171,288,181.3C384,192,480,192,576,186.7C672,181,768,171,864,170.7C960,171,1056,181,1152,176C1248,171,1344,149,1392,138.7L1440,128V320H1392C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320H0V128Z"%3E%3C/path%3E%3C/svg%3E');
+    background-size: cover;
+    z-index: -1;
+  }
+}
